@@ -25,7 +25,7 @@ router.put('/:id', (req, res) => {
 })
 
 router.delete('/:id', (req, res) => {
-    Orders.findOneAndUpdate(req.params.id).exec().then(() => res.sendStatus(204))
+    Orders.findOneAndDelete(req.params.id).exec().then(() => res.sendStatus(204))
 })
 
 module.exports = router
